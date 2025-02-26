@@ -1,8 +1,10 @@
 name: Demo Workflow
 on:
-  push:
+  pull_request:
+    types:
+    - opened
     branches:
-    - main
+    - 'main'
 jobs:
   job1:
     name: Job 1
