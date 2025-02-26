@@ -4,7 +4,7 @@ on:
     branches:
     - main
 jobs:
-  my_job:
+  job1:
     name: Job 1
     runs-on: ubuntu-latest
     steps:
