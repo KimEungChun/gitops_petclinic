@@ -23,7 +23,7 @@ jobs:
               run: echo "Hello World"
 
             - name: 여려 명령어 문장 작성하기
-                run: |
+              run: |
                     echo "첫 번째 줄"
                     echo "두 번째 줄"
                     echo "세 번째 줄"
