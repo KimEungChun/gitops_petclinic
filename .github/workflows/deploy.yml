@@ -28,8 +28,11 @@ jobs:
                     echo "두 번째 줄"
                     echo "세 번째 줄"
             - name: github actions 자체에 저장되어 있는 변수 사용하기
-              run: 
-                echo "현재 시간은 ${{ github.event_name }} 입니다."
+              run: |
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
+            - name: 아무한테 노울이 되면 안되는 값
+              run: |
+                echo $${{ secrets.AWS_ACCESS_KEY_ID }}
+
              
