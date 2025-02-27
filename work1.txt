@@ -1,0 +1,2 @@
+git config --global user.name "김응천"
+git config --global user.email "kkimec@gmail.com"
