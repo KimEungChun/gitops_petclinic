@@ -80,7 +80,7 @@ jobs:
       run: |
         sed -i 's|image: .*|image: 975050030271.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-eks-repo:${{ github.sha }}|' k8s/deployment.yaml
 
-    # 변경사항이 있으면 커밋하고 푸시합니다.
+    # 변경사항이 있으면 커밋하고 푸시합니다. 
     # 변경된 k8s/deployment.yaml파일을 git에 push
     - name: Commit and push if there are changes
       run: |
