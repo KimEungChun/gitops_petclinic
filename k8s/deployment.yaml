@@ -14,7 +14,7 @@ spec:
     spec:
       containers: 
         - name: petclinic # ${{ github.sha }}
-          image: 975050030271.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-eks-repo:f1ab9805101d9c2e795859e80e13584b2675871b
+          image: 975050030271.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-eks-repo:ae7bc1e79321096488fd6e7637362261c4008ac4
           ports:
             - containerPort: 8080
           resources:
