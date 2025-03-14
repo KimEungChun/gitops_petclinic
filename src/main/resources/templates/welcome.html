@@ -5,11 +5,35 @@
   <body>
 
     <h2 th:text="#{welcome}">Welcome</h2>
-    <div class="row">
-        <div class="col-md-12">
-          <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pets.png}"/>
-        </div>
-    </div>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      
+      <div class="contact-info">
+          <h2>Address</h2>
+          <div class="contact-item">
+              <span class="contact-label">본사:</span>
+              <span class="contact-value">서울시 서초구 강남대로53길 8, 11층 126호</span>
+          </div>
+          <div class="contact-item">
+              <span class="contact-label">Labs:</span>
+              <span class="contact-value">경기도 성남시 중원구 양현로 405번길 7 404호 (신야탑푸르지오시티2)</span>
+          </div>
+      </div>
+      
+      <div class="contact-info">
+          <div class="contact-item">
+              <span class="contact-label">Phone:</span>
+              <span class="contact-value">02-3401-5010</span>
+          </div>
+      </div>
+      
+      <div class="contact-info">
+          <div class="contact-item">
+              <span class="contact-label">Email:</span>
+              <span class="contact-value">portal@mydata.re.kr</span>
+          </div>
+      </div>
+  </div>
 
   </body>
 
