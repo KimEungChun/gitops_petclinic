@@ -2,10 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: petclinic
-  labels:
-    app: petclinic
 spec:
-  replicas: 3  # 원하는 replicas 수로 설정
+  replicas: 2
   selector:
     matchLabels:
       app: petclinic
@@ -14,19 +12,9 @@ spec:
       labels:
         app: petclinic
     spec:
-      containers:  # ${{ github.sha }}
-        - name: petclinic
+      containers: 
+        - name: petclinic # ${{ github.sha }}
           image: 975050030271.dkr.ecr.ap-northeast-2.amazonaws.com/gitops-eks-repo:${{ github.sha }}
-          env:
-            - name: SPRING_PROFILES_ACTIVE
-              value: postgres
-            - name: SERVICE_BINDING_ROOT
-              value: /bindings
-            - name: SPRING_APPLICATION_JSON
-              value: |
-                {
-                  "management.endpoint.health.probes.add-additional-paths": true
-                }
           ports:
             - containerPort: 8080
           resources:
@@ -48,13 +36,3 @@ spec:
               port: 8080
             initialDelaySeconds: 60
             periodSeconds: 15
-          volumeMounts:
-            - mountPath: /bindings/secret
-              name: binding
-              readOnly: true
-      volumes:
-        - name: binding
-          projected:
-            sources:
-              - secret:
-                  name: demo-db
