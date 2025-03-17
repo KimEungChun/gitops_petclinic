@@ -5,7 +5,7 @@ metadata:
   labels:
     app: petclinic
 spec:
-  replicas: 1  # 원하는 replicas 수로 설정
+  replicas: 3  # 원하는 replicas 수로 설정
   selector:
     matchLabels:
       app: petclinic
